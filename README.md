@@ -13,5 +13,5 @@ box のつかいかた
 ansible でプロビジョニング
 --------------------------
 
-`./provision_local.sh` を実行します。詳細は `site.xml` や `roles` ディレクトリを参照してください。
+`setup` ディレクトリにある `./provision_local.sh` を実行します。詳細は `site.xml` や `roles` ディレクトリを参照してください。
 

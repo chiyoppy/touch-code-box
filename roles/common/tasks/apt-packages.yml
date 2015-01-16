@@ -1,0 +1,60 @@
+---
+- name: use jaist repository
+  command: sed -i".bak" -e 's/\/\/us.archive.ubuntu.com/\/\/ftp.jaist.ac.jp/g' /etc/apt/sources.list creates=/etc/apt/sources.list.bak
+
+- name: update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: install packages for build
+  apt: name={{ item }} state=latest
+  with_items:
+    - gcc
+    - g++
+    - make
+    - cmake
+    - automake
+    - autoconf
+    - pkg-config
+    - gettext
+    - build-essential
+    - autotools-dev
+    - zlib1g-dev
+    - libyaml-dev
+    - libssl-dev
+    - libgdbm-dev
+    - libreadline-dev
+    - libncurses5-dev
+    - libacl1-dev
+    - libffi-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - libcurl4-openssl-dev
+    - libgpm-dev
+    - libicu-dev
+    - libexpat1-dev
+    - zlib1g-dev
+    - libmysqlclient-dev
+    - libperl-dev
+    - python-dev
+    - python3-dev
+    - ruby-dev
+    - lua5.2
+    - liblua5.2-dev
+
+- name: install tools
+  apt: name={{ item }} state=latest
+  with_items:
+    - vim
+    - emacs
+    - zsh
+    - wget
+    - curl
+    - nkf
+    - git
+    - tig
+    - unzip
+    - php5
+    - postgresql
+    - sqlite
+    - mongodb
+    - phpmyadmin

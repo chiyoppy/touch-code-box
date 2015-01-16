@@ -1,0 +1,6 @@
+---
+ruby_version: 2.1.4
+ruby_sha256sum: bf9952cdeb3a0c6a5a27745c9b4c0e5e264e92b669b2b08efb363f5156549204
+ruby_base_dir: /opt/src
+ruby_archive: "{{ ruby_base_dir }}/ruby-{{ ruby_version }}.tar.gz"
+ruby_extract_dir: "{{ ruby_base_dir }}/ruby-{{ ruby_version }}"

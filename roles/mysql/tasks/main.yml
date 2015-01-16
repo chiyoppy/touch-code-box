@@ -1,0 +1,9 @@
+---
+- name: install mysql
+  apt: name=mysql-server state=latest
+
+- name: install python-mysqldb driver module
+  apt: name=python-mysqldb state=latest
+
+- name: setup mysql user
+  mysql_user: name={{ mysql_user_name }} password={{ mysql_user_password }} priv=*.*:ALL state=present

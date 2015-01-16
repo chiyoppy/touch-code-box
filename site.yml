@@ -1,0 +1,6 @@
+---
+- hosts: default
+  sudo: yes
+  roles:
+    - common
+    - mysql

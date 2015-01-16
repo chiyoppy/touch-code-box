@@ -12,4 +12,4 @@
   mysql_user: name={{ pma_user_name }} password={{ pma_user_password }} priv=*.*:ALL state=present
 
 - name: link phpmyadmin apache config file
-  file: src=/etc/phpmyadmin/apache.conf dest=/etc/apache2/conf-available/phpmyadmin.conf state=link
+  file: src=/etc/phpmyadmin/apache.conf dest=/etc/apache2/conf-enabled/phpmyadmin.conf state=link

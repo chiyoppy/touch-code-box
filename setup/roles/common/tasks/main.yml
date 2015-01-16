@@ -1,3 +1,2 @@
 ---
 - include: apt-packages.yml
-- include: ruby.yml

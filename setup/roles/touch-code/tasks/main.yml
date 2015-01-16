@@ -2,8 +2,10 @@
 - name: configure apache
   copy: src=touch-code.conf dest=/etc/apache2/sites-available/touch-code.conf owner=root group=root mode=0644
 
-- name: enable apache config file
+- name: enable apache config
   command: a2ensite touch-code
 
-- name: ensure apache is running
-  command: service apache2 restart
+- name: disable default config
+  file: path=/etc/apache2/sites-enabled/000-default.conf state=absent
+
+- service: name=apache2 state=restarted

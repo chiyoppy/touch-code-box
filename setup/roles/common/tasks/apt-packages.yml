@@ -3,7 +3,7 @@
   command: sed -i".bak" -e 's/\/\/us.archive.ubuntu.com/\/\/ftp.jaist.ac.jp/g' /etc/apt/sources.list creates=/etc/apt/sources.list.bak
 
 - name: update apt cache
-  apt: update_cache=yes cache_valid_time=3600
+  apt: update_cache=yes
 
 - name: install packages for build
   apt: name={{ item }} state=latest

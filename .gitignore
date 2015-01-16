@@ -1,4 +1,4 @@
 !*.gitkeep
 *.box
 .vagrant
-codes/
+!codes/index.html

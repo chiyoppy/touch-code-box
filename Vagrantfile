@@ -12,8 +12,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: "192.168.61.100"
 
+  # codes
+  config.vm.synced_folder "codes", "/home/vagrant/codes"
+
   # ansible
-  config.vm.provision "shell", path: "setup/install_ansible.sh"
   config.vm.synced_folder "setup", "/home/vagrant/setup"
 
   config.vm.provider "virtualbox" do |vb|

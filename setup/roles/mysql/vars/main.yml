@@ -1,3 +1,5 @@
 ---
 mysql_user_name: vagrant
 mysql_user_password: vagrant
+pma_user_name: phpmyadmin
+pma_user_password: LEGGt45vIFm8

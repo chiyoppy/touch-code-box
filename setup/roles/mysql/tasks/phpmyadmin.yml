@@ -5,6 +5,8 @@
 - name: copy dpkg config
   copy: src=phpmyadmin.conf dest=/etc/dbconfig-common/phpmyadmin.conf owner=root group=root mode=0600
 
+- mysql_db: name=phpmyadmin state=import target=/usr/share/doc/phpmyadmin/examples/create_tables.sql.gz
+
 - name: copy phpmyadmin config
   copy: src=config-db.php dest=/etc/phpmyadmin/config-db.php owner=root group=www-data mode=640
 
